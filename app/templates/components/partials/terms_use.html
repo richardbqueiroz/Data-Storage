@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-5">
+  <div class="card shadow-lg border-0">
+    <div class="card-header bg-primary text-white text-center py-4">
+      <h1 class="display-5">Termos de Uso</h1>
+    </div>
+    <div class="card-body px-4 py-5">
+      <p class="fs-5 text-justify">
+        O <strong>DataStorage</strong> é um sistema de gerenciamento de estoque desenvolvido para resolver as dificuldades
+        enfrentadas por pequenas e médias empresas em manter um controle preciso e centralizado de estoques, fornecedores
+        e produtos. Este sistema oferece uma plataforma acessível e intuitiva para simplificar o gerenciamento de mercadorias.
+      </p>
+      <p class="fs-5 text-justify">
+        Nosso objetivo é fornecer ferramentas que permitem cadastrar e controlar fornecedores, marcas, categorias e produtos,
+        além de funcionalidades para registrar vendas, calcular lucros e gerenciar movimentações de estoque de forma eficaz.
+      </p>
+      <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-secondary btn-lg">
+          <i class="fas fa-arrow-left me-2"></i>Voltar
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

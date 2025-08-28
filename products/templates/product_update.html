@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %} 
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="display-6">Editar Produto</h3>
+      </div>
+      <div class="card-body">
+        <form method="post" class="form">
+          {% csrf_token %}
+          <div class="form-group mb-3">
+            <label for="title" class="form-label">Título:</label>
+            <input type="text" name="title" class="form-control" id="title" value="{{ form.title.value }}">
+          </div>
+          <div class="form-group mb-3">
+            <label for="category" class="form-label">Categoria:</label>
+            {{ form.category }}
+          </div>
+          <div class="form-group mb-3">
+            <label for="brand" class="form-label">Marca:</label>
+            {{ form.brand }}
+          </div>
+          <div class="form-group mb-3">
+            <label for="description" class="form-label">Descrição:</label>
+            <textarea name="description" class="form-control" id="description" rows="3">{{ form.description.value }}</textarea>
+          </div>
+          <div class="form-group mb-3">
+            <label for="serie_number" class="form-label">Número de Série:</label>
+            <input type="text" name="serie_number" class="form-control" id="serie_number" value="{{ form.serie_number.value }}">
+          </div>
+          <div class="form-group mb-3">
+            <label for="cost_price" class="form-label">Preço de Custo:</label>
+            <input type="number" name="cost_price" class="form-control" id="cost_price" value="{{ form.cost_price.value }}">
+          </div>
+          <div class="form-group mb-3">
+            <label for="selling_price" class="form-label">Preço de Venda:</label>
+            <input type="number" name="selling_price" class="form-control" id="selling_price" value="{{ form.selling_price.value }}">
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar Produto</button>
+        </form>
+      </div>
+    </div>
+    <a href="{% url 'product_list' %}" class="btn btn-secondary mt-3">Cancelar e Voltar</a>
+  </div>
+{% endblock  %}

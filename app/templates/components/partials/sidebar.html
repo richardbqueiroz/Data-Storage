@@ -1,0 +1,87 @@
+<div class="offcanvas offcanvas-start bg-body-tertiary" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+  <div class="offcanvas-header border-bottom" id="offcanvas-header-custom">
+    <div class="text-content ms-4 py-1">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <i class="fa-solid fa-box-open"></i> 
+        <span class="ms-1">Data Storage</span>
+      </a>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="container-fluid">
+      <div class="nav flex-column align-items-start">
+        <div class="nav-item">
+          <a href="{% url 'home' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+            <i class="fa-solid fa-gauge-high"></i>
+            <span class="ms-1 fs-5">Dashboard</span>
+          </a>
+        </div>
+        {% if perms.suppliers.view_supplier %}
+          <div class="nav-item">
+            <a href="{% url 'supplier_list' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+              <i class="fa-solid fa-truck"></i>
+              <span class="ms-1 fs-5">Fornecedores</span>
+            </a>
+          </div>
+        {% endif %}   
+        {% if perms.brands.view_brand %}
+          <div class="nav-item">
+            <a href="{% url 'brand_list' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+              <i class="fa-solid fa-shop"></i>
+              <span class="ms-1 fs-5">Marcas</span>
+            </a>
+          </div>
+        {% endif %}
+        {% if perms.categories.view_category %}  
+          <div class="nav-item">
+            <a href="{% url 'category_list' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+              <i class="fa-solid fa-tags"></i>
+              <span class="ms-1 fs-5">Categorias</span>
+            </a>
+          </div>
+        {% endif %}
+        {% if perms.products.view_product %}  
+          <div class="nav-item">
+            <a href="{% url 'product_list' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+              <i class="fa-solid fa-box"></i>
+              <span class="ms-1 fs-5">Produtos</span>
+            </a>
+          </div>
+        {% endif %}
+        {% if perms.inflows.view_inflow %}  
+          <div class="nav-item">
+            <a href="{% url 'inflow_list' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+              <i class="fa-solid fa-square-plus"></i>
+              <span class="ms-1 fs-5">Entradas</span>
+            </a>
+          </div>
+        {% endif %}
+        {% if perms.outflows.view_outflow %}  
+          <div class="nav-item">
+            <a href="{% url 'outflow_list' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <span class="ms-1 fs-5">Saídas</span>
+            </a>
+          </div>
+        {% endif %}
+        {% if perms.users.view_user %}
+          <div class="nav-item">
+            <a href="{% url 'user_list' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+              <i class="fa-solid fa-users"></i>
+              <span class="ms-1 fs-5">Usuários</span>
+            </a>
+          </div>
+        {% endif %}
+        {% if perms.reports.view_report %} 
+          <div class="nav-item">
+            <a href="{% url 'report_list' %}" class="nav-link ms-3 fs-5 px-0 align-middle">
+              <i class="fa-solid fa-file-lines"></i>
+              <span class="ms-1 fs-5">Relatórios</span>
+            </a>
+          </div>
+        {% endif %}    
+      </div>
+    </div>  
+  </div>
+</div>

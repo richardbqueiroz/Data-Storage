@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+  
+#main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} 
+
+#login {
+    margin-top: 8.125rem;
+}
+
+#offcanvas-header-custom {
+    padding-bottom: 1.25rem;
+}  
+
+.icon-large {
+    font-size: 23.6875rem;
+}
+
+.footer-text {
+    text-decoration: none;
+}
+
+body.light-theme .shadow-uniforme {
+  box-shadow: 0 0 1rem 0 rgba(5, 4, 4, 0.523) !important;
+}

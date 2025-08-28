@@ -1,0 +1,46 @@
+<div class="card shadow-sm border-0 bg-transparent">
+  <div class="card-body">
+    <div class="row g-4">
+      <div class="col-md-3 d-flex align-items-stretch">
+        <div class="card rounded-4 shadow-sm w-100 bg-transparent border-0">
+          <div class="card-header bg-primary text-white rounded-top">
+            <h5 class="card-title mb-0 text-center">Quantidade de Produtos</h5>
+          </div>
+          <div class="card-body border border-primary rounded-bottom text-center bg-transparent">
+            <p class="card-text fw-bold display-6 mb-0">{{ product_metrics.total_quantity }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex align-items-stretch">
+        <div class="card rounded-4 shadow-sm w-100 bg-transparent border-0">
+          <div class="card-header bg-danger text-white rounded-top">
+            <h5 class="card-title mb-0 text-center">Custo de Estoque</h5>
+          </div>
+          <div class="card-body border border-danger rounded-bottom text-center bg-transparent">
+            <p class="card-text fw-bold display-6 mb-0">R$ {{ product_metrics.total_cost_price }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex align-items-stretch">
+        <div class="card rounded-4 shadow-sm w-100 bg-transparent border-0">
+          <div class="card-header bg-success text-white rounded-top">
+            <h5 class="card-title mb-0 text-center">Valor do Estoque</h5>
+          </div>
+          <div class="card-body border border-success rounded-bottom text-center bg-transparent">
+            <p class="card-text fw-bold display-6 mb-0">R$ {{ product_metrics.total_selling_price }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex align-items-stretch">
+        <div class="card rounded-4 shadow-sm w-100 bg-transparent border-0">
+          <div class="card-header bg-warning text-white rounded-top">
+            <h5 class="card-title mb-0 text-center">Lucro de Estoque</h5>
+          </div>
+          <div class="card-body border border-warning rounded-bottom text-center bg-transparent">
+            <p class="card-text fw-bold display-6 mb-0">R$ {{ product_metrics.total_profit }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

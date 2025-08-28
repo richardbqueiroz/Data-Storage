@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="display-6">Gerador de Relatórios</h3>
+      </div>  
+      <div class="card-body">
+        {% include 'components/reports_cards.html' %}
+      </div>
+    </div>  
+  </div>
+{% endblock %}

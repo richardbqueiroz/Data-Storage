@@ -1,0 +1,99 @@
+<div class="row">
+  {% if perms.suppliers.view_supplier %}
+    <div class="col-md-3">
+      <a href="{% url 'supplier_report' %}" class="text-decoration-none">
+        <div class="card btn btn-outline-light">
+          <div class="card-body">
+            <i class="fa-solid fa-truck me-2"></i>
+            <span class="fs-5">Fornecedores</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  {% if perms.brands.view_brand %}
+    <div class="col-md-3">
+      <a href="{% url 'brand_report' %}" class="text-decoration-none">
+        <div class="card btn btn-outline-light">
+          <div class="card-body">
+            <i class="fa-solid fa-shop me-2"></i>
+            <span class="fs-5">Marcas</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  {% if perms.categories.view_category %}  
+    <div class="col-md-3">
+      <a href="{% url 'category_report' %}" class="text-decoration-none">
+        <div class="card btn btn-outline-light">
+          <div class="card-body">
+            <i class="fa-solid fa-tags me-2"></i>
+            <span class="fs-5">Categorias</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  {% if perms.products.view_product %}  
+    <div class="col-md-3">
+      <a href="{% url 'product_report' %}" class="text-decoration-none">
+        <div class="card btn btn-outline-light">
+          <div class="card-body">
+            <i class="fa-solid fa-box me-2"></i>
+            <span class="fs-5">Produtos</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}  
+  <div class="w-100 my-2"></div>
+  {% if perms.inflows.view_inflow %}
+    <div class="col-md-3">
+      <a href="{% url 'inflow_report' %}" class="text-decoration-none">
+        <div class="card btn btn-outline-light">
+          <div class="card-body">
+            <i class="fa-solid fa-square-plus me-2"></i>
+            <span class="fs-5">Entradas</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  {% if perms.outflows.view_outflow %}  
+    <div class="col-md-3">
+      <a href="{% url 'outflow_report' %}" class="text-decoration-none">
+        <div class="card btn btn-outline-light">
+          <div class="card-body">
+            <i class="fa-solid fa-arrow-up-right-from-square me-2"></i>
+            <span class="fs-5">Saídas</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  {% if perms.users.view_user %}  
+    <div class="col-md-3">
+      <a href="{% url 'user_report' %}" class="text-decoration-none">
+        <div class="card btn btn-outline-light">
+          <div class="card-body">
+            <i class="fa-solid fa-users me-2"></i>
+            <span class="fs-5">Usuários</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  {% if perms.reports.view_report %}  
+    <div class="col-md-3">
+      <a href="{% url 'totality_report' %}" class="text-decoration-none">
+        <div class="card btn btn-outline-light">
+          <div class="card-body">
+            <i class="fa-solid fa-file-lines me-2"></i>
+            <span class="fs-5">Relatório Geral</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+</div>

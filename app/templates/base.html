@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="auto">
+  <head>
+    {% include 'components/partials/head.html' %}
+  </head>
+  <body>
+    <div id="main-container">
+      {% include 'components/partials/header.html' %}
+      <div class="container mt-4">
+        <div class="container-fluid py-3">
+          <main>
+            {% block content %}
+            {% endblock %}
+          </main>
+        </div>
+      </div>
+      {% include 'components/partials/footer.html' %}
+    </div>
+    {% include 'components/partials/scripts.html' %}
+  </body>
+</html>

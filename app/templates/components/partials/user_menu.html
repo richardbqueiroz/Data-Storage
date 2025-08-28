@@ -1,0 +1,19 @@
+<div class="justify-content-end">
+  {% if user.is_authenticated %}
+    <div class="btn-group dropstart">
+      <button type="button" class="btn btn-outline-primary dropdown-toggle me-2 py-2 rounded" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ request.user.username }}
+      </button>
+      <ul class="dropdown-menu justify-content-end bg-body-tertiary">
+        <li><a class="dropdown-item dropdown-item-icon" href="{% url 'user_detail' request.user.id %}"><i class="fa-solid fa-circle-user"></i> Meus dados</a></li>
+        <li><a class="dropdown-item dropdown-item-icon" href="{% url 'terms_use' %}"><i class="fa-solid fa-file-lines"></i> Termos de uso</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+          <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmLogoutModal">
+            <i class="fa-solid fa-circle-xmark"></i> Sair
+          </button>
+        </li>
+      </ul>  
+    </div>
+  {% endif %}      
+</div>
